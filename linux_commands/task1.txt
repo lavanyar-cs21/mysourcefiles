@@ -1,0 +1,4 @@
+Execute the create_folders shell file
+Create a file named charlie.txt in tiger folder
+Change the working directory to domestic folder
+Copy charlie.txt to lion folder with the destination filename charlie2.txt
