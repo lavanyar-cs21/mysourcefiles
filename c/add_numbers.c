@@ -1,19 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-int add(int,int);
-int main()
-{
-    int x,y,result;
-    printf("Enter Two Numbers: ");
-    scanf("%d %d",&x,&y);
-    result=add(x,y);
-    printf("%d + %d = %d\n",x,y,result);
-    return 0;
+int sum;
+
+int Sum(int a, int b) {
+    if (b == 0)
+        return a;
+    sum = Sum(a, b - 1) + 1;
+    return sum;
 }
-int add(int x, int y)
-{
-    if(y==0)
-        return x;
-    else
-        return(1+add(x,y-1));
+
+int main() {
+    int x,y;
+
+    printf("Enter Two Integer Values:");
+    scanf("%d %d", &x, &y);
+    printf("The Total Value: %d + %d = %d\n", x,y,Sum(x,y));
+    return 0;
 }
